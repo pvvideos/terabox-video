@@ -1,120 +1,103 @@
 body {
-  margin:0;
+  margin: 0;
   font-family: Arial, sans-serif;
-  background:#ffffff;
-  color:#000;
+  background: #ffffff;
+  color: #000;
 }
 
-/* TOP BAR */
+/* ===== HEADER ===== */
 .top {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  height:56px;
-  border-bottom:1px solid #ddd;
-  background:#fff;
-  position:sticky;
-  top:0;
-  z-index:10;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
 .logo {
-  height:38px;
+  height: 55px;
 }
 
-/* SEARCH BAR */
-.search-box {
-  padding:8px;
-}
-
-.search-box input {
-  width:100%;
-  padding:10px;
-  font-size:16px;
-  border:1px solid #ccc;
-  border-radius:6px;
-}
-
-/* GRID – 3 posters per row (mobile) */
+/* ===== GRID (MAIN PAGE) ===== */
 .grid {
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:8px;
-  padding:8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 12px;
 }
 
-/* POSTER CARD */
+/* ===== POSTER CARD ===== */
 .poster {
-  border:1px solid #e0e0e0;
-  border-radius:6px;
-  overflow:hidden;
-  background:#fff;
-  text-decoration:none;
-  color:#000;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  text-decoration: none;
+  color: #000;
 }
 
-/* FIXED FRAME */
+/* FIXED FRAME (same size posters) */
 .frame {
-  width:100%;
+  width: 100%;
   aspect-ratio: 2 / 3;
-  background:#f2f2f2;
-  overflow:hidden;
+  background: #f0f0f0;
+  overflow: hidden;
 }
 
-.poster img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* POSTER TITLE (BIG & BOLD) */
+/* POSTER TITLE */
 .poster p {
-  margin:6px 4px;
-  font-size:15px;
-  font-weight:700;
-  text-align:center;
+  margin: 8px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* DETAIL PAGE */
+/* ===== DETAIL PAGE ===== */
 .detail-title {
-  font-size:20px;
-  font-weight:800;
-  padding:10px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
 }
 
 .detail-desc {
-  padding:0 10px;
-  font-size:16px;
-  line-height:1.5;
-  font-weight:500;
-}
-
-/* BIG BUTTONS */
-.btn {
-  display:block;
-  background:#e50914;
-  color:white;
-  padding:16px;
-  margin:10px;
-  text-align:center;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:17px;
-  font-weight:800;
+  padding: 0 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 /* CLICK TEXT */
 .click-text {
-  text-align:center;
-  font-weight:800;
-  font-size:16px;
-  margin:8px 0;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+/* BIG BUTTONS */
+.btn {
+  display: block;
+  background: #e50914;
+  color: #fff;
+  padding: 16px;
+  margin: 12px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* SECTION TITLE */
 .section-title {
-  padding:10px;
-  font-size:18px;
-  font-weight:800;
-  border-top:1px solid #ddd;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 1px solid #ddd;
 }
