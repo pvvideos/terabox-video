@@ -10,7 +10,7 @@ const posters = [
   {
     id: 2,
     title: " 19 minit 34 second viral video full hd ",
-    image: "images/"IMG_20260130_171412_225.jpg"
+    image: "images/IMG_20260130_171412_225.jpg"
 ",
     description: "Instagram most viral video 19:34 second a couple enjoying ",
     terabox: "https://teraboxurl.com/s/12LEPgspYBPW8cZ8_os81xg",
