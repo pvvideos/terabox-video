@@ -9,10 +9,11 @@ const posters = [
   },
   {
     id: 2,
-    title: "Movie Two",
-    image: "images/poster2.jpg",
-    description: "Movie details here",
-    terabox: "https://teraboxlink",
-    telegram: "https://t.me/yourchannel"
+    title: " 19 minit 34 second viral video full hd ",
+    image: "images/"IMG_20260130_171412_225.jpg"
+",
+    description: "Instagram most viral video 19:34 second a couple enjoying ",
+    terabox: "https://teraboxurl.com/s/12LEPgspYBPW8cZ8_os81xg",
+    telegram: "https://earning-boot-provider-04.in/movies-here"
   }
 ];
