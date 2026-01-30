@@ -18,7 +18,7 @@ const posters = [
   {
     id: 3,
     title: "Third viral post demo",
-    image: "images/poster3.jpg",
+    image: "ChatGPT Image Jan 30, 2026, 09_33_30 PM.png",
     description: "Third post test",
     terabox: "https://terabox-link-3",
     telegram: "https://telegram-link-3"
