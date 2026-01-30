@@ -1,18 +1,16 @@
-const grid = document.getElementById("poster-container");
+const container = document.getElementById("poster-container");
 
 posters.forEach(item => {
-  const card = document.createElement("div");
+  const card = document.createElement("a");
+  card.href = `details.html?id=${item.id}`;
   card.className = "card";
 
   card.innerHTML = `
-    <img src="${item.image}">
+    <div class="img-box">
+      <img src="${item.image}">
+    </div>
     <h3>${item.title}</h3>
   `;
 
-  card.onclick = () => {
-    window.location.href = `details.html?id=${item.id}`;
-  };
-
-  grid.appendChild(card);
+  container.appendChild(card);
 });
-
