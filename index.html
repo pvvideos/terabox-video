@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>TeraBox Video</title>
-<script src="data.js"></script>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body style="margin:0;font-family:Arial;background:#fff;">
+<header class="top">
+  <img src="ChatGPT Image Jan 30, 2026, 03_14_52 PM.png" class="logo">
+</header>
 
-<!-- LOGO -->
-<div style="text-align:center;padding:12px;border-bottom:1px solid #ddd;">
-  <img src="ChatGPT Image Jan 30, 2026, 03_14_52 PM.png" style="max-width:220px;width:100%;">
+<div class="search-box">
+  <input type="text" id="search" placeholder="Search videos...">
 </div>
 
-<!-- SEARCH -->
-<div style="padding:10px;">
-  <input type="text" placeholder="Search videos..."
-    style="width:100%;padding:12px;font-size:16px;
-    border:1px solid #ccc;border-radius:6px;">
-</div>
+<div class="grid" id="posterGrid"></div>
 
-<!-- POSTERS -->
-<div id="posterBox" style="
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  padding:8px;">
-</div>
-
+<script src="data.js"></script>
 <script>
-const box = document.getElementById("posterBox");
+const grid = document.getElementById("posterGrid");
+const search = document.getElementById("search");
 
-videos.forEach(v => {
-  box.innerHTML += 
-    <a href="${v.link}" style="text-decoration:none;color:black;">
-      <div style="border:1px solid #ccc;">
-        <img src="${v.image}"
-          style="width:100%;aspect-ratio:2/3;object-fit:cover;">
-        <p style="font-weight:bold;text-align:center;font-size:16px;">
-          ${v.title}
-        </p>
-      </div>
-    </a>
-  ;
+function render(list){
+  grid.innerHTML = "";
+  list.forEach(p => {
+    grid.innerHTML += `
+      <a href="post.html?id=${p.id}" class="poster">
+        <div class="frame">
+          <img src="${p.image}">
+        </div>
+        <p>${p.title}</p>
+      </a>
+    `;
+  });
+}
+
+render(posters);
+
+search.addEventListener("input", () => {
+  const v = search.value.toLowerCase();
+  render(posters.filter(p => p.title.toLowerCase().includes(v)));
 });
 </script>
 
