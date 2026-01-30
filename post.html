@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+  <title>Details</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="top">
-  <img src="logo.png" class="logo">
-</header>
 
 <div id="content"></div>
 
 <script src="data.js"></script>
 <script>
-const id = parseInt(new URLSearchParams(location.search).get("id"));
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
 const movie = posters.find(p => p.id === id);
+
+// more videos = main page style
+const more = posters.slice(0, 20);
 
 document.getElementById("content").innerHTML = `
   <div class="detail-title">${movie.title}</div>
 
-  <div class="frame" style="margin:10px;">
+  <div class="frame" style="margin:12px;">
     <img src="${movie.image}">
   </div>
 
-  <div class="detail-desc">${movie.desc}</div>
+  <div class="detail-desc">
+    ${movie.desc}
+  </div>
 
   <div class="click-text">👇 Click to watch 👇</div>
 
-  <a href="${movie.terabox}" class="btn">▶ Play on Terabox App</a>
+  <a href="${movie.terabox}" class="btn">
+    ▶ Play on Terabox App
+  </a>
 
-  <a href="${movie.telegram}" class="btn">Join Telegram Channel</a>
+  <a href="${movie.telegram}" class="btn">
+    Join Telegram Channel
+  </a>
 
   <div class="section-title">More Videos</div>
 
   <div class="grid">
-    ${posters.map(p => `
+    ${more.map(p => `
       <a href="post.html?id=${p.id}" class="poster">
         <div class="frame">
           <img src="${p.image}">
