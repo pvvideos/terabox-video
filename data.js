@@ -22,5 +22,21 @@ const posters = [
     description: "Third post test",
     terabox: "https://terabox-link-3",
     telegram: "https://telegram-link-3"
+  },
+  {
+    id: 4,
+    title: "Third viral post demo",
+    image: "ChatGPT Image Jan 30, 2026, 09_33_30 PM.png",
+    description: "Third post test",
+    terabox: "https://terabox-link-3",
+    telegram: "https://telegram-link-3"
+  },
+  {
+    id: 5,
+    title: "Third viral post demo",
+    image: "ChatGPT Image Jan 30, 2026, 09_33_30 PM.png",
+    description: "Third post test",
+    terabox: "https://terabox-link-3",
+    telegram: "https://telegram-link-3"
   }
 ];
