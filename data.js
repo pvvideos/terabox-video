@@ -9,7 +9,7 @@ const posters = [
   {
     id: 2,
     title: "19 minnitus viral video",
-    image: "images/poster2.jpg",
+    image: "IMG_20260130_171412_225.jpg",
     terabox: "https://teraboxurl.com/s/12LEPgspYBPW8cZ8_os81xg",
     telegram: "https://earning-boot-provider-04.in/movies-here"
   }
