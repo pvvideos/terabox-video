@@ -6,12 +6,22 @@
 </head>
 <body>
 
-<img class="poster" src="images/p1.jpg">
+<div id="details"></div>
 
-<h3>instagram chashmish viral girl video</h3>
+<script src="data.js"></script>
+<script>
+const id = new URLSearchParams(location.search).get("id");
+const p = posters.find(x => x.id == id);
 
-<a class="btn play" href="TERABOX_LINK">▶ PLAY VIDEO</a>
-<a class="btn tg" href="TELEGRAM_LINK">JOIN TELEGRAM</a>
+document.getElementById("details").innerHTML = `
+  <img class="detail-img" src="${p.image}">
+  <h2>${p.title}</h2>
+  <p>${p.description}</p>
+
+  <a class="btn play" href="${p.terabox}">▶ PLAY VIDEO</a>
+  <a class="btn tg" href="${p.telegram}">📢 JOIN TELEGRAM</a>
+`;
+</script>
 
 </body>
 </html>
