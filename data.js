@@ -2,7 +2,7 @@ const posters = [
   {
     id: 1,
     title: "Instagram chashmish viral girl video",
-    image: "images/poster1.jpg",
+    image: "IMG_20260130_165312_974.jpg",
     description: "Most trending Instagram viral video",
     terabox: "https://terabox-link-1",
     telegram: "https://telegram-link-1"
