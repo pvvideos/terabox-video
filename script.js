@@ -1,21 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-  alert("JS LOADED");
+alert("JS WORKING");
 
-  const container = document.getElementById("poster-container");
-  if (!container) {
-    alert("Container nahi mila");
-    return;
-  }
+alert("posters type: " + typeof posters);
 
-  posters.forEach(function (item) {
-    const box = document.createElement("a");
-    box.href = "details.html?id=" + item.id;
-    box.className = "poster";
+const container = document.getElementById("poster-container");
 
-    box.innerHTML =
-      '<img src="' + item.image + '">' +
-      '<h3>' + item.title + '</h3>';
+if (!container) {
+  alert("container missing");
+}
 
-    container.appendChild(box);
-  });
+posters.forEach(function (item) {
+  const a = document.createElement("a");
+  a.href = "details.html?id=" + item.id;
+  a.className = "poster";
+
+  a.innerHTML =
+    '<img src="' + item.image + '">' +
+    '<h3>' + item.title + '</h3>';
+
+  container.appendChild(a);
 });
